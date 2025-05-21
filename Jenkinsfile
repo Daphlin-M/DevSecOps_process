@@ -11,13 +11,14 @@ pipeline {
         SCANNER_SCRIPT = "ai_scanner.py" 
         // Define the folder to scan. Use '.' for the entire repository.
         CODE_TO_SCAN_PATH = "." 
+        // add
     }
 
     stages {
         stage('Checkout Code') {
             steps {
                 // Adjust this based on your SCM (e.g., Git, SVN)
-                git branch: 'main', url: 'YOUR_REPOSITORY_URL' 
+                git branch: 'main', url: 'https://github.com/Daphlin-M/DevSecOps_process.git' 
             }
         }
 
