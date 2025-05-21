@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     // Use a virtual environment for better dependency management
-                    sh 'python3 -m venv venv'
+                    sh 'python -m venv venv'
                     sh '. venv/bin/activate && pip install -r requirements.txt' 
                     // Create a requirements.txt if you don't have one:
                     // echo "google-generativeai" > requirements.txt
