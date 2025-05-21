@@ -8,6 +8,8 @@ import pandas as pd
 import openpyxl
 import base64
 import os
+import google.generativeai as genai
+import google.generativeai as types
 # from google import genai
 # from google.genai import types
 
@@ -102,7 +104,7 @@ def call_gemini(prompt):
         api_key="AIzaSyDs_XaVu_kOESiL8dq9fViNoVcr6t1mqp8",
     )
 
-    model = "gemini-2.0-pro-exp-02-05"
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
     contents = [
         types.Content(
             role="user",
